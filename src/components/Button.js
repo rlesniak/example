@@ -12,6 +12,15 @@ export default function Button({ color, size, children }) {
 		fontSize: Button.sizes[size],
 	};
 
+	const obj = {
+		foo: 1,
+		bar: {
+			zzz: 2,
+		}
+	}
+
+	console.log(obj?.bar?.zzz) // ERROR HERE
+
 	return (
 		<button className={s.root} style={styles}>
 			{children}
